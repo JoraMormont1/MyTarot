@@ -4,7 +4,7 @@ data class Deal(
     val id:Int = UNDEFINED_ID,
     val name:String,
     val description:String,
-    val img1: String,
+    val img: String,
     val title:String = ""
 ){
     companion object{
