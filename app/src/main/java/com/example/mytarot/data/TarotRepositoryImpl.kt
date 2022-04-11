@@ -39,7 +39,7 @@ class TarotRepositoryImpl(
             mapper.mapListDbDealPosToListEntity(it)
         }
 
-    override fun getDealsUseCase(): LiveData<List<Deal>> =
+    override fun getDeals(): LiveData<List<Deal>> =
         Transformations.map(
             tarotDao.getDeals()
         ){

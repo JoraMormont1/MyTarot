@@ -23,16 +23,19 @@ abstract class AppDatabase: RoomDatabase() {
         fun getInstance(application: Application): AppDatabase{
             INSTANCE?.let {
                 return it
+
             }
             synchronized(LOCK){
                 INSTANCE?.let {
                     return it
                 }
+                application.deleteDatabase("tarot.db")
                 val db = Room.databaseBuilder(
                     application,
                     AppDatabase::class.java,
                     DB_NAME
                 ).allowMainThreadQueries()
+                    .createFromAsset("tarot.db")
                     .build()
                 INSTANCE = db
                 return db

@@ -9,6 +9,6 @@ interface TarotRepository {
     fun getCardsByArcana(arcana: String): LiveData<List<Card>>
     fun getCardMeaningById(cardId: Int): LiveData<List<Meaning>>
     fun getDealPositionsById(cardId: Int): LiveData<List<DealPos>>
-    fun getDealsUseCase(): LiveData<List<Deal>>
+    fun getDeals(): LiveData<List<Deal>>
     fun calculateArchetypeUseCase(birthDate: Date): Int
 }
