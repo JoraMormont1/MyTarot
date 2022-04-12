@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTarot">
         <activity
-            android:name=".DirectoryActivity"
+            android:name=".presentation.DirectoryActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
