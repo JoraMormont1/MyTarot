@@ -13,7 +13,7 @@ interface TarotDao {
     fun getCardsByArcana(arcanaName: String): LiveData<List<CardDbModel>>
 
     @Query("SELECT * FROM archetypes_card WHERE id =:cardId LIMIT 1")
-    fun getArchetypesById(cardId: Int): ArchetypeCardDbModel
+    suspend fun getArchetypesById(cardId: Int): ArchetypeCardDbModel
 
     @Query("SELECT * FROM meanings WHERE id =:cardId")
     fun getCardMeaningById(cardId: Int): LiveData<List<MeaningDbModel>>
@@ -23,11 +23,4 @@ interface TarotDao {
 
     @Query("SELECT * FROM deal_positions WHERE deal_id =:id")
     fun getDealPositionsById(id: Int): LiveData<List<DealPosDbModel>>
-//    @Insert(onConflict = OnConflictStrategy.REPLACE)
-//    fun addShopItem(shopItemDbModel: ShopItemDbModel)
-
-//    @Query("DELETE FROM shop_items WHERE id =:shopItemId")
-//    fun deleteShopItem(shopItemId: Int)
-
-
 }

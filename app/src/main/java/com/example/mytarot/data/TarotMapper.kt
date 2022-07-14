@@ -21,10 +21,12 @@ class TarotMapper {
     fun mapDbCardToEntity(cardDbModel: CardDbModel) = Card(
         id = cardDbModel.id,
         name = cardDbModel.name,
+        title = cardDbModel.title,
         arcana = cardDbModel.arcana,
         img1  = cardDbModel.img1,
         img2 = cardDbModel.img2,
         img3 = cardDbModel.img3
+
     )
 
     fun mapDbDealToEntity(dealDbModel: DealDbModel) = Deal(

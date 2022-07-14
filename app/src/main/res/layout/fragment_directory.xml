@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    app:layout_constraintVertical_chainStyle="packed"
+    tools:context=".presentation.fragments.DirectoryFragment">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonHighArc"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:background="@drawable/button_clicked_high"
+        android:fontFamily="@font/roboto_thin"
+        android:text="@string/High_arcs"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@id/titleMinorArc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleMinorArc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/minor_arc"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:fontFamily="@font/roboto_thin"
+        android:shadowDy="4"
+        android:shadowRadius="0.2"
+        android:shadowColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/buttonSwords"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonHighArc" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSwords"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:background="@drawable/button_clicked_swords"
+        android:fontFamily="@font/roboto_thin"
+        android:text="@string/swords"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonWands"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleMinorArc" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonWands"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:background="@drawable/button_clicked_wands"
+        android:fontFamily="@font/roboto_thin"
+        android:text="@string/wands"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCups"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSwords" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonCups"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:background="@drawable/button_clicked_cups"
+        android:fontFamily="@font/roboto_thin"
+        android:text="@string/cups"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPentacles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonWands" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonPentacles"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:background="@drawable/button_clicked_pentacles"
+        android:fontFamily="@font/roboto_thin"
+        android:text="@string/pentacles"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCups" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="698dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

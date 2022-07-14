@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="110dp"
+        tools:context=".presentation.fragments.CardItemFragment">
+
+        <TextView
+            android:id="@+id/tv_fill_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_thin"
+            android:shadowColor="@color/black"
+            android:shadowDy="2"
+            android:layout_marginStart="24dp"
+            android:shadowRadius="0.1"
+            android:text="@string/enter_birthdate"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@id/til_date"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+
+            android:paddingHorizontal="24dp"
+            app:boxStrokeColor="#BEABB4"
+            app:boxStrokeWidth="0.2dp"
+            app:boxStrokeWidthFocused="0.2dp"
+            app:layout_constraintEnd_toStartOf="@id/button_calc_archetypes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_fill_date">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_date"
+                android:layout_width="180dp"
+                android:layout_height="64dp"
+                android:background="@drawable/date_bg"
+                android:fontFamily="@font/roboto_thin"
+                android:hint="@string/date_hint"
+                android:inputType="date"
+
+                android:maxHeight="60dp"
+
+                android:textSize="24sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_calc_archetypes"
+            android:layout_width="140dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_calc"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/button_calculate"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/til_date"
+            app:layout_constraintTop_toBottomOf="@id/tv_fill_date" />
+
+        <!--1-->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_archetype_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="-16dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_date">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#997B5456"
+                >
+
+                <TextView
+                    android:id="@+id/tv_archetype_num"
+                    android:layout_width="40dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/archetype_num"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingTop="4dp"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_archetype_desc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="32dp"
+                    android:paddingVertical="8dp"
+                    android:paddingTop="4dp"
+                    android:ellipsize="end"
+                    android:text="@string/arc_pos1"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/roboto_light"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_archetype_num"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <!--2-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_archetype_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="-16dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_archetype_1"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#997B5456"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/tv_archetype_num2"
+                    android:layout_width="40dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/archetype_num"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingHorizontal="16dp"
+                    android:paddingTop="4dp"
+                    android:text="2"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_archetype_desc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingHorizontal="32dp"
+                    android:paddingVertical="8dp"
+                    android:paddingTop="4dp"
+                    android:text="@string/arc_pos2"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_archetype_num2"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <!--3-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_archetype_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="-16dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_archetype_2"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#997B5456"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/tv_archetype_num3"
+                    android:layout_width="40dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/archetype_num"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingTop="4dp"
+                    android:text="3"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_archetype_desc3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingHorizontal="32dp"
+                    android:paddingVertical="8dp"
+                    android:paddingTop="4dp"
+                    android:text="@string/arc_pos3"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_archetype_num3"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <!--4-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_archetype_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background"
+            android:paddingTop="-16dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_archetype_3"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#997B5456"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/tv_archetype_num4"
+                    android:layout_width="40dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/archetype_num"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingTop="4dp"
+                    android:text="4"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_archetype_desc4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingHorizontal="32dp"
+                    android:paddingVertical="8dp"
+                    android:paddingTop="4dp"
+                    android:text="@string/arc_pos4"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_archetype_num4"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <!--5-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_archetype_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background"
+            android:paddingTop="-16dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_archetype_4"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#997B5456"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/tv_archetype_num5"
+                    android:layout_width="40dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/archetype_num"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingTop="4dp"
+                    android:text="5"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_archetype_desc5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingHorizontal="32dp"
+                    android:paddingVertical="8dp"
+                    android:paddingTop="4dp"
+                    android:text="@string/arc_pos5"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_archetype_num5"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <!--6-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_archetype_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background"
+            android:paddingTop="-16dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_archetype_5"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#997B5456"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/tv_archetype_num6"
+                    android:layout_width="40dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/archetype_num"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingTop="4dp"
+                    android:text="6"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_archetype_desc6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingHorizontal="32dp"
+                    android:paddingVertical="8dp"
+                    android:paddingTop="4dp"
+                    android:text="@string/arc_pos6"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_archetype_num6"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <!--7-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_archetype_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background"
+            android:paddingTop="-16dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_archetype_6"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#997B5456"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/tv_archetype_num7"
+                    android:layout_width="40dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/archetype_num"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingTop="4dp"
+                    android:text="7"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_archetype_desc7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingHorizontal="32dp"
+                    android:paddingVertical="8dp"
+                    android:paddingTop="4dp"
+                    android:text="@string/arc_pos7"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_archetype_num7"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <!--8-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_archetype_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background"
+            android:paddingTop="-16dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_archetype_7"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#997B5456"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/tv_archetype_num8"
+                    android:layout_width="40dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/archetype_num"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingTop="4dp"
+                    android:text="8"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_archetype_desc8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingHorizontal="32dp"
+                    android:paddingVertical="8dp"
+                    android:paddingTop="4dp"
+                    android:text="@string/arc_pos8"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_archetype_num8"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <!--9-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_archetype_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingTop="-16dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_archetype_8">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#997B5456"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/tv_archetype_num9"
+                    android:layout_width="40dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/archetype_num"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingTop="4dp"
+                    android:text="9"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_archetype_desc9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingHorizontal="32dp"
+                    android:paddingVertical="8dp"
+                    android:paddingTop="4dp"
+                    android:text="@string/arc_pos9"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/white"
+
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_archetype_num9"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

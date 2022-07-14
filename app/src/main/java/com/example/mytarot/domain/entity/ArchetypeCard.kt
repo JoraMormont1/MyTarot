@@ -15,4 +15,19 @@ data class ArchetypeCard(
     companion object {
         const val UNDEFINED_ID = 0
     }
+
+    fun getPosByNum(num: Int):String {
+        return when (num) {
+            1 -> pos1
+            2 -> pos2
+            3 -> pos3
+            4 -> pos4
+            5 -> pos5
+            6 -> pos6
+            7 -> pos7
+            8 -> pos8
+            9 -> pos9
+            else -> ""
+        }
+    }
 }

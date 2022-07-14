@@ -12,6 +12,8 @@ data class CardDbModel(
     val id:Int,
     @ColumnInfo(name = "name")
     val name:String,
+    @ColumnInfo(name = "title")
+    val title:String,
     @ColumnInfo(name = "arcana")
     val arcana:String,
     @ColumnInfo(name = "img1")

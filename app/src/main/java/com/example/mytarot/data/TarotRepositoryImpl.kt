@@ -14,7 +14,7 @@ class TarotRepositoryImpl(
     private val tarotDao = AppDatabase.getInstance(application).tarotDao()
     private val mapper = TarotMapper()
 
-    override fun getArchetypeById(cardId: Int): ArchetypeCard {
+    override suspend fun getArchetypeById(cardId: Int): ArchetypeCard {
         return mapper.mapDbArchetypesToEntity(tarotDao.getArchetypesById(cardId))
     }
 
@@ -45,9 +45,4 @@ class TarotRepositoryImpl(
         ){
             mapper.mapListDbDealsToListEntity(it)
         }
-
-
-    override fun calculateArchetypeUseCase(birthDate: Date): Int {
-        TODO("Not yet implemented")
-    }
 }

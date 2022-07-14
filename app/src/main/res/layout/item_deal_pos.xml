@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="36dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@android:color/transparent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#664952"
+            android:alpha="0.9"
+            android:padding="12dp"
+            android:animateLayoutChanges="true">
+
+            <TextView
+                android:id="@+id/tv_deal_pos_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="1 карта"
+                android:textAlignment="center"
+                android:textColor="#BB8093"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_deal_pos_desc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/arrow_expand_left"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:contentDescription="@string/arrow_expand"
+                android:background="@drawable/arrow_expand"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tv_deal_pos_name"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/arrow_expand_right"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/arrow_expand"
+                android:contentDescription="@string/arrow_expand"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tv_deal_pos_name"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_deal_pos_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_regular"
+                android:visibility="gone"
+                android:text="Почему этот вопрос возник, какова ситуация на текущий момент.
+                Он обычно показывает подоплеку заданного вопроса, проблемы, или отношение
+                вопрошающего к предстоящему решению."
+                android:padding="4dp"
+
+                android:shadowRadius="0.1"
+                android:textColor="#D3C9CC"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_deal_pos_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+

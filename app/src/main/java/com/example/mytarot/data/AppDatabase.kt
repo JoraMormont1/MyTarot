@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase
 @Database(
     entities = [ArchetypeCardDbModel::class, CardDbModel::class,
         DealDbModel::class, DealPosDbModel::class, MeaningDbModel::class],
-        version = 1,
+        version = 2,
         exportSchema = false
 )
 abstract class AppDatabase: RoomDatabase() {
@@ -34,7 +34,7 @@ abstract class AppDatabase: RoomDatabase() {
                     application,
                     AppDatabase::class.java,
                     DB_NAME
-                ).allowMainThreadQueries()
+                )
                     .createFromAsset("tarot.db")
                     .build()
                 INSTANCE = db

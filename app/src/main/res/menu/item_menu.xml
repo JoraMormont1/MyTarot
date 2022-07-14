@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/dealListFragment"
+        android:title="Расклады"
+        android:icon="@drawable/item_selector_deals"
+        />
+    <item
+        android:id="@id/directoryFragment"
+        android:title="Справочник"
+        android:icon="@drawable/item_selector_dir"
+        />
+    <item
+        android:id="@id/archetypeListFragment"
+        android:title="Архетипы"
+        android:icon="@drawable/item_selector_arc"
+        />
+
+</menu>
