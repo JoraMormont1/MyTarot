@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ShapeAppearanceOverlay.App.Card.Media" parent="">
+
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomLeft">200dp</item>
+        <item name="cornerSizeBottomRight">200dp</item>
+        <item name="cornerSizeTopRight">200dp</item>
+
+    </style>
+
+    <style name="Custom_textinputlayout_filledbox" parent="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+        <item name="boxStrokeColor">#BEABB4</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:textColorPrimary">#DC88A2</item>
+        <item name="android:textColorSecondary">#DC88A2</item>
+        <item name="android:textColor">#DC88A2</item>
+    </style>`
+</resources>

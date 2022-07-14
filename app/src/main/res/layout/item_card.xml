@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    >
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginEnd="8dp"
+
+        app:cardCornerRadius="4dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@android:color/transparent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/iv_card_short_img"
+                android:layout_width="70dp"
+                android:layout_height="132dp"
+                android:contentDescription="@string/card_img"
+                android:src="@drawable/card_img_temp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_card_short_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:hint="0/22 Шут (Дурак)"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:shadowDy="4"
+                android:shadowRadius="0.1"
+                android:shadowColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_card_short_desc"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_card_short_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:ellipsize="end"
+                android:maxLines="5"
+                android:hint="Если мы посмотрим на карту Таро Шут колоды Райдера-Уэйта,
+                то увидим молодого человека, который стоит в опасной близости от края,
+                за которым простирается бездонная пропасть. Кажется, что этот парень уже ..."
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/buttonCardDetailed"
+                android:padding="4dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@+id/iv_card_short_img"
+                app:layout_constraintTop_toBottomOf="@id/tv_card_short_name" />
+            
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonCardDetailed"
+                android:layout_width="28dp"
+                android:layout_height="42dp"
+                android:background="@drawable/button_card_detail"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_card_short_desc"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                />
+
+            <View
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+
+                android:layout_height="0.8dp"
+                android:background="#80FFFFFF"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

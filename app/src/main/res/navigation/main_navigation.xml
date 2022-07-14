@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/directoryFragment">
+    <fragment
+        android:id="@+id/directoryFragment"
+        android:name="com.example.mytarot.presentation.fragments.DirectoryFragment"
+        android:label="fragment_directory"
+        tools:layout="@layout/fragment_directory" >
+        <action
+            android:id="@+id/action_directoryFragment_to_cardListFragment2"
+            app:destination="@id/cardListFragment2" />
+        <action
+            android:id="@+id/action_directoryFragment_to_archetypeListFragment"
+            app:destination="@id/archetypeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardListFragment2"
+        android:name="com.example.mytarot.presentation.fragments.CardListFragment"
+        android:label="card_list_fragment"
+        tools:layout="@layout/card_list_fragment" >
+        <argument
+            android:name="arcana"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_cardListFragment2_to_cardItemFragment"
+            app:destination="@id/cardItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardItemFragment"
+        android:name="com.example.mytarot.presentation.fragments.CardItemFragment"
+        android:label="fragment_card_item"
+        tools:layout="@layout/fragment_card_item" >
+        <argument
+            android:name="card"
+            app:argType="com.example.mytarot.domain.entity.Card" />
+    </fragment>
+    <fragment
+        android:id="@+id/archetypeListFragment"
+        android:name="com.example.mytarot.presentation.fragments.ArchetypeListFragment"
+        android:label="ArchetypeListFragment" >
+        <action
+            android:id="@+id/action_archetypeListFragment_to_dealListFragment"
+            app:destination="@id/dealListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dealListFragment"
+        android:name="com.example.mytarot.presentation.fragments.DealListFragment"
+        android:label="fragment_deal_list"
+        tools:layout="@layout/fragment_deal_list" >
+        <action
+            android:id="@+id/action_dealListFragment_to_dealItemFragment"
+            app:destination="@id/dealItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dealItemFragment"
+        android:name="com.example.mytarot.presentation.fragments.DealItemFragment"
+        android:label="fragment_deal_item"
+        tools:layout="@layout/fragment_deal_item" >
+        <argument
+            android:name="deal"
+            app:argType="com.example.mytarot.domain.entity.Deal" />
+    </fragment>
+</navigation>
